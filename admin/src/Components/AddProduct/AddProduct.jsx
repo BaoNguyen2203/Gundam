@@ -46,6 +46,16 @@ const AddProduct = () => {
             product.image = responseData.image_url; // Cập nhật đường dẫn hình ảnh vào đối tượng sản phẩm
             console.log('Image URL:', responseData.image_url); // In ra URL của hình ảnh đã tải lên
             console.log('Updated Product Details:', product); // In ra thông tin sản phẩm đã cập nhật
+            await fetch('http://localhost:4000/addproduct',{
+                method: 'POST',
+                headers:{
+                    Accept:'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(product),
+            }).then((resp)=> resp.json()).then((data)=>{
+                data.success?alert("Product Added"):alert("Failed")
+            })
         } else {
             console.error('Upload failed:', responseData.message); // In ra thông báo lỗi nếu upload không thành công
         }
