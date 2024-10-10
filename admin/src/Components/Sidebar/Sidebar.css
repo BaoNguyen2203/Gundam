@@ -1,3 +1,9 @@
+.sidebar-item img {
+    width: 24px; /* Điều chỉnh kích thước cho phù hợp */
+    height: 24px; /* Điều chỉnh kích thước cho phù hợp */
+    object-fit: contain; /* Đảm bảo ảnh không bị méo */
+}
+
 .sidebar {
     display: flex;
     flex-direction: column;

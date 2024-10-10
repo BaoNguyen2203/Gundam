@@ -1,0 +1,29 @@
+.list-user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px 50px;
+    margin: 30px;
+    border-radius: 6px;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ cho đẹp */
+}
+
+.listuser-format-main {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr 1fr 1fr; /* Cân chỉnh tỷ lệ cột hợp lý hơn */
+    gap: 10px;
+    width: 100%;
+    padding: 20px 0px;
+    color: #454545;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center; /* Căn giữa văn bản */
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
